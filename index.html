@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <title>🦷 Ատամների խնամք</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* === BASE STYLES === */
+    body{
+        margin:0;
+        font-family:'Arial', sans-serif;
+        background: linear-gradient(to bottom,#f0f8ff,#ffffff);
+        color:#333;
+    }
+    header{
+        text-align:center;
+        padding:25px 10px;
+        background: linear-gradient(90deg,#00bcd4,#4dd0e1);
+        color:white;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        border-bottom-left-radius:25px;
+        border-bottom-right-radius:25px;
+    }
+    header p{
+        margin-top:5px;
+        font-size:16px;
+        opacity:0.9;
+    }
+
+    /* BUTTONS GRID */
+    .buttons{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+        max-width:700px;
+        margin:40px auto;
+    }
+    .buttons a{
+        flex:1 1 200px;
+        text-align:center;
+        padding:18px;
+        border-radius:20px;
+        text-decoration:none;
+        font-size:16px;
+        font-weight:bold;
+        background:linear-gradient(135deg,#00bcd4,#4dd0e1);
+        color:white;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+    .buttons a:hover{
+        transform:translateY(-5px) scale(1.05);
+        box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    footer{
+        text-align:center;
+        margin:40px auto;
+        padding:10px;
+        color:#777;
+    }
+
+    /* CHAT BUTTON */
+    #chatBtn{
+        position:fixed;
+        bottom:20px; right:20px;
+        background:#ff9800;
+        color:white;
+        border:none;
+        padding:15px 20px;
+        border-radius:50px;
+        font-size:18px;
+        cursor:pointer;
+        box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        z-index:100;
+    }
+
+    /* CHATBOX */
+    #chatBox{
+        position:fixed;
+        bottom:80px; right:20px;
+        width:300px;
+        max-height:400px;
+        background:white;
+        border-radius:15px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.3);
+        display:none;
+        flex-direction:column;
+        overflow:hidden;
+        z-index:100;
+    }
+    #chatHeader{
+        background:#ff9800;
+        color:white;
+        padding:10px;
+        text-align:center;
+        font-weight:bold;
+    }
+    #chatMessages{
+        flex:1;
+        padding:10px;
+        overflow-y:auto;
+        background:#f0f0f0;
+    }
+    #chatInputBox{
+        display:flex;
+        border-top:1px solid #ccc;
+    }
+    #chatInputBox input{
+        flex:1;
+        padding:8px;
+        border:none;
+    }
+    #chatInputBox button{
+        padding:8px 12px;
+        border:none;
+        background:#ff9800;
+        color:white;
+        cursor:pointer;
+    }
+    .message{
+        margin:5px 0;
+        padding:8px 10px;
+        border-radius:12px;
+        max-width:80%;
+    }
+    .userMsg{background:#00bcd4; color:white; margin-left:auto;}
+    .aiMsg{background:#e0e0e0; color:#333; margin-right:auto;}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+        .buttons a{ flex:1 1 100%; }
+        #chatBox{width:90%; right:5%; bottom:90px;}
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🦷 Ատամների խնամք</h1>
+    <p>Պահպանիր ժպիտդ առողջ ✨</p>
+</header>
+
+<div class="buttons">
+    <a href="damage.html">❌ Ինչն է վնասում</a>
+    <a href="useful.html">✅ Ինչն է օգտակար</a>
+    <a href="toothpaste.html">🪥 Ատամի մածուկ</a>
+    <a href="brush.html">🧼 Խոզանակ</a>
+    <a href="cleaning.html">🔄 Ինչպես լվալ</a>
+</div>
+
+<footer>
+    <p>© 2026 Ատամների խնամք</p>
+</footer>
+
+<!-- CHAT -->
+<button id="chatBtn" onclick="toggleChat()">💬 Կապ մասնագետի հետ</button>
+<div id="chatBox">
+    <div id="chatHeader">AI Chat</div>
+    <div id="chatMessages"></div>
+    <div id="chatInputBox">
+        <input id="chatInput" placeholder="Գրեք ձեր հարցը...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<!-- <script>
+// Chatbox toggle
+function toggleChat(){
+    let box=document.getElementById('chatBox');
+    box.style.display=(box.style.display==='flex')?'none':'flex';
+}
+
+// Chat simulation (AI)
+function sendMessage(){
+    let input=document.getElementById('chatInput');
+    let msg=input.value.trim();
+    if(!msg) return;
+    addMessage(msg,'userMsg');
+    input.value='';
+    // Simulate AI response
+    setTimeout(()=>{
+        addMessage("AI: Սա AI պատասխանը ձեր հարցին՝ " + msg,'aiMsg');
+    },800);
+}
+
+function addMessage(msg,className){
+    let msgDiv=document.createElement('div');
+    msgDiv.className='message '+className;
+    msgDiv.textContent=msg;
+    document.getElementById('chatMessages').appendChild(msgDiv);
+    document.getElementById('chatMessages').scrollTop=document.getElementById('chatMessages').scrollHeight;
+}
+</script> -->
+
+</body>
+</html>

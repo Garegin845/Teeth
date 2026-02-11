@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔄 Ինչպես ճիշտ լվալ ատամները</title>
+<style>
+body {
+    margin:0;
+    font-family:'Arial', sans-serif;
+    background: linear-gradient(to bottom,#fff9e6,#ffffff);
+    color:#333;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    text-align:center;
+    padding:25px 10px;
+    background: linear-gradient(90deg,#ffb74d,#ff9800);
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+}
+
+/* SECTION TITLE */
+h2.section-title{
+    text-align:center;
+    margin:40px 10px 20px;
+    font-size:26px;
+    color:#f57c00;
+}
+
+/* INFO CARDS CONTAINER */
+.info-cards{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+    margin:20px auto 50px;
+    padding:0 15px;
+}
+
+/* INFO CARD */
+.info-card{
+    background:linear-gradient(135deg,#ffb74d,#ff9800);
+    color:white;
+    padding:18px 22px;
+    border-radius:18px;
+    font-size:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    opacity:0;
+    transform: translateY(50px) scale(0.95);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    cursor:pointer;
+}
+.info-card::after{
+    content:"✨";
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    font-size:20px;
+    opacity:0.3;
+    animation:sparkle 2s infinite alternate;
+}
+.info-card:hover{
+    transform: translateY(0) scale(1.05);
+    box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* BACK BUTTON */
+.back{
+    display:block;
+    text-align:center;
+    margin:40px auto;
+    padding:12px 25px;
+    background:#f57c00;
+    color:white;
+    font-size:16px;
+    border-radius:12px;
+    text-decoration:none;
+    transition:0.3s;
+}
+.back:hover{
+    background:#ff9800;
+    transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp{
+    0% { opacity:0; transform: translateY(50px) scale(0.95);}
+    60% { opacity:1; transform: translateY(-10px) scale(1.02);}
+    100% { opacity:1; transform: translateY(0) scale(1);}
+}
+@keyframes sparkle{
+    0% {transform: rotate(0deg) translateX(0px) rotate(0deg); opacity:0.2;}
+    50% {transform: rotate(20deg) translateX(2px) rotate(-20deg); opacity:0.5;}
+    100% {transform: rotate(-10deg) translateX(-2px) rotate(10deg); opacity:0.2;}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .info-card{ font-size:14px; padding:14px 18px; }
+    h2.section-title{ font-size:22px; }
+}
+</style>
+</head>
+<body>
+
+<header><h1>🔄 Ինչպես ճիշտ լվալ ատամները</h1></header>
+
+<h2 class="section-title">💡 Խորհուրդներ ճիշտ լվացման համար</h2>
+<div class="info-cards">
+    <div class="info-card">Օրական երկու անգամ, առավոտյան և երեկոյան։</div>
+    <div class="info-card">Օգտագործել 2–3 րոպե, ոչ շատ արագ։</div>
+    <div class="info-card">Շարժումները պետք է լինեն նուրբ, վերևից ներքև և շրջանաձև։</div>
+    <div class="info-card">Լվանալ նաև լեզուն՝ բակտերիաները հեռացնելու համար։</div>
+    <div class="info-card">Խորհուրդ է տալ փափուկ խոզանակ օգտագործել, որը չի վնասում էմալը։</div>
+    <div class="info-card">Մածուկը չափավոր քանակով՝ ոչ շատ հաստ շերտ։</div>
+    <div class="info-card">Ծնոտի բոլոր մասերը՝ առջևի և հետևի ատամները, պետք է մաքրել։</div>
+    <div class="info-card">Լվանալուց հետո թողեք խոզանակը օդում չորանալու համար, չփակեք շշի մեջ։</div>
+    <div class="info-card">Օգտագործեք ատամի թել՝ առնվազն օրական մեկ անգամ լնդերի առողջության համար։</div>
+</div>
+
+<a class="back" href="index.html">⬅ Վերադառնալ գլխավոր էջ</a>
+
+<script>
+/* Scroll animation */
+const cards = document.querySelectorAll('.info-card');
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.animation='fadeInUp 0.8s forwards';
+        }
+    });
+},{threshold:0.2});
+cards.forEach(card=>observer.observe(card));
+</script>
+
+</body>
+</html>

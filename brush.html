@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦷 Ատամների ամբողջական ուղեցույց</title>
+<style>
+body {
+    margin:0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+    color:#333;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px 10px;
+    background: linear-gradient(90deg, #00bcd4, #4dd0e1);
+    color:white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+}
+
+/* SECTION TITLE */
+h2.section-title {
+    text-align:center;
+    margin:40px 10px 20px;
+    font-size:26px;
+    color:#007c91;
+}
+
+/* INFO CARDS CONTAINER */
+.info-cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin:20px 10px 50px;
+}
+
+/* INFO CARD */
+.info-card{
+    background:linear-gradient(135deg,#00bcd4,#4dd0e1);
+    color:white;
+    padding:20px;
+    border-radius:20px;
+    width:260px;
+    text-align:center;
+    font-size:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    opacity:0;
+    transform: translateY(50px) scale(0.95);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor:pointer;
+    position: relative;
+}
+.info-card::after{
+    content:"✨";
+    position:absolute;
+    top:-10px; right:-10px;
+    font-size:24px;
+    opacity:0.3;
+    animation: sparkle 2s infinite alternate;
+}
+.info-card:hover{
+    transform: translateY(0) scale(1.05);
+    box-shadow:0 15px 25px rgba(0,0,0,0.25);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp{
+    0% { opacity:0; transform: translateY(50px) scale(0.95);}
+    60% { opacity:1; transform: translateY(-10px) scale(1.02);}
+    100% { opacity:1; transform: translateY(0) scale(1);}
+}
+@keyframes sparkle{
+    0% {transform: rotate(0deg) translateX(0px) rotate(0deg); opacity:0.2;}
+    50% {transform: rotate(20deg) translateX(2px) rotate(-20deg); opacity:0.5;}
+    100% {transform: rotate(-10deg) translateX(-2px) rotate(10deg); opacity:0.2;}
+}
+
+/* BACK BUTTON */
+.back{
+    display:block;
+    text-align:center;
+    margin:40px auto;
+    padding:12px 25px;
+    background:#007c91;
+    color:white;
+    font-size:16px;
+    border-radius:12px;
+    text-decoration:none;
+    transition:0.3s;
+}
+.back:hover{
+    background:#4dd0e1;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .info-card{ width:92%; font-size:14px; padding:16px;}
+    h2.section-title{ font-size:22px;}
+}
+</style>
+</head>
+<body>
+
+<header><h1>🦷 Ատամների ամբողջական ուղեցույց</h1></header>
+
+<!-- CHOOSING TOOTHPASTE -->
+<h2 class="section-title">🪥 Ինչ մածուկ ընտրել</h2>
+<div class="info-cards">
+    <div class="info-card">🛡 Ֆտոր – ամրացնում է էմալը, պաշտպանում ատամները, կանխում խոցերը։</div>
+    <div class="info-card">🌿 Sensitive – թուլացնում է ցավը սառը և տաք սննդից, խթանում է ատամների առողջությունը։</div>
+    <div class="info-card">✨ Whitening – հեռացնում մակերեսային բծերը, տալիս պայծառ սպիտակ երանգ։</div>
+    <div class="info-card">🦷 Gum Care – հեռացնում լնդերի բորբոքումը և ամրացնում լնդերը։</div>
+</div>
+
+<!-- TOOTHBRUSH -->
+<h2 class="section-title">🪥 Ինչ խոզանակ ընտրել</h2>
+<div class="info-cards">
+    <div class="info-card">Soft – լավագույնն ամենօրյա օգտագործման համար։</div>
+    <div class="info-card">Medium – միայն բժշկի խորհրդով, խորը մաքրում։</div>
+    <div class="info-card">Երեխաների խոզանակ – փոքր գլխիկ, փափուկ մազիկներ։</div>
+</div>
+
+<!-- COMMON MISTAKES -->
+<h2 class="section-title">❌ Սխալներ, որոնք վնասում են ատամները</h2>
+<div class="info-cards">
+    <div class="info-card">Շատ ուժեղ ճնշմամբ լվանալ ատամները։</div>
+    <div class="info-card">Մեծ քանակ մածուկ օգտագործել։</div>
+    <div class="info-card">Միայն առջևի ատամները լվանալ։</div>
+    <div class="info-card">Խոզանակը չփոխել 3 ամիսը մեկ։</div>
+    <div class="info-card">Շաքար, գազավորված ըմպելիքներ և քաղցրավենիք օգտագործելը առանց լվանալու։</div>
+    <div class="info-card">Ծխելը վնասում է լնդերը և գունափոխում ատամները։</div>
+</div>
+
+<!-- BENEFICIAL FOODS -->
+<h2 class="section-title">✅ Օգտակար սնունդ ատամների համար</h2>
+<div class="info-cards">
+    <div class="info-card">🥛 Կաթնամթերք – ամրացնում է ատամի էմալը, պարունակում ֆոսֆոր և կալցիում։</div>
+    <div class="info-card">🥕 Բանջարեղեն և միրգ – բնական ձևով մաքրում են ատամները, խթանում լնդերի առողջությունը։</div>
+    <div class="info-card">💧 Ջուր – լվանում է սննդի մնացորդները, կանխում բակտերիաների վերարտադրությունը։</div>
+    <div class="info-card">🫚 Ֆտոր պարունակող հավելումներ – ամրացնում են էմալը և կանխում փտումը։</div>
+    <div class="info-card">🥜 Նուշ, ընկույզ – ամրացնում են էմալը և պաշտպանում ատամները։</div>
+    <div class="info-card">🥦 Բրոկոլի և կանաչ բանջարեղեն – բարձրացնում լնդերի առողջությունը։</div>
+</div>
+
+<a class="back" href="index.html">⬅ Վերադառնալ գլխավոր էջ</a>
+
+<script>
+/* Scroll animation */
+const cards = document.querySelectorAll('.info-card');
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.animation = 'fadeInUp 0.8s forwards';
+        }
+    });
+},{threshold:0.2});
+
+cards.forEach(card=>observer.observe(card));
+</script>
+
+</body>
+</html>
