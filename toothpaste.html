@@ -14,7 +14,7 @@ body{
     color:#333;
 }
 
-/* HEADER */
+
 header{
     text-align:center;
     padding:25px 10px;
@@ -46,7 +46,7 @@ header{
 div{
    cursor: pointer;
 }
-/* SECTION TITLES */
+
 h2{
     text-align:center;
     margin-top:50px;
@@ -55,7 +55,6 @@ h2{
     animation: fadeUp 1s ease;
 }
 
-/* CARDS */
 .cards{
     display:flex;
     justify-content:center;
@@ -88,7 +87,7 @@ h2{
     color:#555;
 }
 
-/* CARD HOVER INFO */
+
 .card-hover{
     position:absolute;
     bottom:-100%;
@@ -105,7 +104,7 @@ h2{
 }
 .card:hover .card-hover{ bottom:0; }
 
-/* PROGRESS BAR */
+
 .progress{
     height:25px;
     background:#ddd;
@@ -122,7 +121,6 @@ h2{
 }
 @keyframes loadBar{ to{ width:80%; } }
 
-/* TIMER */
 .timer-box{
     text-align:center;
     margin:50px auto;
@@ -135,7 +133,7 @@ h2{
     color:#007c91;
 }
 
-/* GLOW BUTTON */
+
 button{
     padding:14px 28px;
     border:none;
@@ -152,7 +150,7 @@ button:hover{
     transform:scale(1.07);
 }
 
-/* MISTAKES SECTION */
+
 .mistakes{
     background:white;
     max-width:700px;
@@ -165,7 +163,7 @@ button:hover{
 .mistakes h3{ color:#007c91; }
 .mistakes li{ margin:10px 0; font-size:16px; }
 
-/* ADDITIONAL INFO CARDS */
+
 .info-cards{
     display:flex;
     justify-content:center;
@@ -190,7 +188,7 @@ button:hover{
     box-shadow:0 15px 25px rgba(0,0,0,0.2);
 }
 
-/* INFO CARD ANIMATIONS */
+
 .animate1{ animation:fadeInfo 1s ease forwards 0.3s; }
 .animate2{ animation:fadeInfo 1s ease forwards 0.6s; }
 .animate3{ animation:fadeInfo 1s ease forwards 0.9s; }
@@ -203,7 +201,7 @@ button:hover{
     to{ opacity:1; transform:translateY(0);}
 }
 
-/* ANIMATIONS */
+
 @keyframes fadeUp{
     from{ opacity:0; transform:translateY(40px); }
     to{ opacity:1; transform:translateY(0); }
@@ -213,7 +211,7 @@ button:hover{
     to{ opacity:1; transform:translateY(0); }
 }
 
-/* BACK TO TOP BUTTON */
+
 #topBtn{
     padding:12px 20px;
     border-radius:50px;
@@ -226,7 +224,7 @@ button:hover{
 }
 #topBtn:hover{ background:#00bcd4; transform:scale(1.1); }
 
-/* MOBILE */
+
 @media(max-width:768px){
     .cards, .info-cards{ flex-direction:column; align-items:center; }
     .card, .info-card{ width:92%; }
@@ -246,7 +244,7 @@ button:hover{
 <h1>🪥 Ինչ մածուկ ընտրել</h1>
 </header>
 
-<!-- CARDS -->
+
 <h2>Մածուկների տեսակներ</h2>
 <div class="cards">
     <div class="card">
@@ -271,13 +269,13 @@ button:hover{
     </div>
 </div>
 
-<!-- CLEANING EFFICIENCY -->
+
 <h2>Մաքրման արդյունավետություն</h2>
 <div class="progress"><div class="progress-bar"></div></div>
 
 
 
-<!-- COMMON MISTAKES -->
+
 <div class="mistakes">
 <h3>❌ Սխալներ, որ մարդիկ անում են</h3>
 <ul>
@@ -288,7 +286,7 @@ button:hover{
 </ul>
 </div>
 
-<!-- ADDITIONAL INFO -->
+
 <h2>🦷 Լավ խորհուրդներ ատամների համար</h2>
 <div class="info-cards">
     <div class="info-card animate1">Օգտագործիր մածուկ՝ ֆտորով՝ օրական 2 անգամ</div>
@@ -298,7 +296,7 @@ button:hover{
     <div class="info-card animate5">Օգտագործիր ատամի թել՝ առնվազն օրական մեկ անգամ</div>
     <div class="info-card animate6">Սննդից հետո խմիր ջուր՝ մնացորդները հեռացնելու համար</div>
 </div>
-<!-- BACK TO HOME BUTTON -->
+
 <div style="text-align:center; margin:50px 0;">
     <a href="index.html" 
        style="
@@ -316,7 +314,7 @@ button:hover{
        ⬅ Վերադառնալ գլխավոր էջ
     </a>
 </div>
-<!-- BACK TO TOP BUTTON -->
+
 <button id="topBtn" onclick="scrollToTop()">🔝 Վերադառնալ վերև</button>
 
 <script>
@@ -342,3 +340,4 @@ function scrollToTop(){
 
 </body>
 </html>
+
