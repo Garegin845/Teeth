@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER */
+
 header {
     text-align: center;
     padding: 20px 10px;
@@ -25,7 +25,6 @@ header {
     animation: fadeDown 1s ease;
 }
 
-/* SECTION TITLES */
 h2.section-title {
     font-size: 24px;
     color: #007c91;
@@ -34,7 +33,7 @@ h2.section-title {
     animation: fadeUp 0.8s ease;
 }
 
-/* INFO CARDS CONTAINER */
+
 .info-cards {
     display: flex;
     flex-direction: column;
@@ -44,7 +43,6 @@ h2.section-title {
     padding: 0 15px;
 }
 
-/* INFO CARD */
 .info-card {
     background: linear-gradient(135deg, #4dd0e1, #00bcd4);
     color: white;
@@ -60,7 +58,7 @@ h2.section-title {
     overflow: hidden;
 }
 
-/* Hover sparkle effect */
+
 .info-card::after {
     content: "✨";
     position: absolute;
@@ -76,7 +74,7 @@ h2.section-title {
     box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* Sequential animation delays */
+
 .info-card:nth-child(1){ animation-delay: 0.3s; }
 .info-card:nth-child(2){ animation-delay: 0.6s; }
 .info-card:nth-child(3){ animation-delay: 0.9s; }
@@ -88,7 +86,7 @@ h2.section-title {
 .info-card:nth-child(9){ animation-delay: 2.7s; }
 .info-card:nth-child(10){ animation-delay: 3s; }
 
-/* BACK BUTTON */
+
 .back {
     display: block;
     text-align: center;
@@ -106,7 +104,7 @@ h2.section-title {
     transform: scale(1.05);
 }
 
-/* ANIMATIONS */
+
 @keyframes fadeUp {
     from { opacity:0; transform: translateY(30px);}
     to { opacity:1; transform: translateY(0);}
@@ -126,7 +124,7 @@ h2.section-title {
     100% { transform: rotate(-10deg) translateX(-2px) rotate(10deg); opacity:0.2; }
 }
 
-/* MOBILE RESPONSIVE */
+
 @media(max-width:480px){
     h2.section-title { font-size:20px; }
     .info-card { font-size:14px; padding:14px 18px; }
@@ -174,3 +172,4 @@ h2.section-title {
 
 </body>
 </html>
+
