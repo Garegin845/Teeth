@@ -13,7 +13,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* HEADER */
+
 header {
     text-align: center;
     padding: 25px 10px;
@@ -24,7 +24,7 @@ header {
     border-bottom-right-radius:25px;
 }
 
-/* SECTION TITLE */
+
 h2.section-title {
     text-align:center;
     margin:40px 10px 20px;
@@ -32,7 +32,7 @@ h2.section-title {
     color:#007c91;
 }
 
-/* INFO CARDS CONTAINER */
+
 .info-cards{
     display:flex;
     flex-wrap:wrap;
@@ -41,7 +41,7 @@ h2.section-title {
     margin:20px 10px 50px;
 }
 
-/* INFO CARD */
+
 .info-card{
     background:linear-gradient(135deg,#00bcd4,#4dd0e1);
     color:white;
@@ -70,7 +70,7 @@ h2.section-title {
     box-shadow:0 15px 25px rgba(0,0,0,0.25);
 }
 
-/* ANIMATIONS */
+
 @keyframes fadeInUp{
     0% { opacity:0; transform: translateY(50px) scale(0.95);}
     60% { opacity:1; transform: translateY(-10px) scale(1.02);}
@@ -82,7 +82,7 @@ h2.section-title {
     100% {transform: rotate(-10deg) translateX(-2px) rotate(10deg); opacity:0.2;}
 }
 
-/* BACK BUTTON */
+
 .back{
     display:block;
     text-align:center;
@@ -100,7 +100,7 @@ h2.section-title {
     transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+
 @media(max-width:768px){
     .info-card{ width:92%; font-size:14px; padding:16px;}
     h2.section-title{ font-size:22px;}
@@ -111,7 +111,7 @@ h2.section-title {
 
 <header><h1>🦷 Ատամների ամբողջական ուղեցույց</h1></header>
 
-<!-- CHOOSING TOOTHPASTE -->
+
 <h2 class="section-title">🪥 Ինչ մածուկ ընտրել</h2>
 <div class="info-cards">
     <div class="info-card">🛡 Ֆտոր – ամրացնում է էմալը, պաշտպանում ատամները, կանխում խոցերը։</div>
@@ -120,7 +120,7 @@ h2.section-title {
     <div class="info-card">🦷 Gum Care – հեռացնում լնդերի բորբոքումը և ամրացնում լնդերը։</div>
 </div>
 
-<!-- TOOTHBRUSH -->
+
 <h2 class="section-title">🪥 Ինչ խոզանակ ընտրել</h2>
 <div class="info-cards">
     <div class="info-card">Soft – լավագույնն ամենօրյա օգտագործման համար։</div>
@@ -128,7 +128,7 @@ h2.section-title {
     <div class="info-card">Երեխաների խոզանակ – փոքր գլխիկ, փափուկ մազիկներ։</div>
 </div>
 
-<!-- COMMON MISTAKES -->
+
 <h2 class="section-title">❌ Սխալներ, որոնք վնասում են ատամները</h2>
 <div class="info-cards">
     <div class="info-card">Շատ ուժեղ ճնշմամբ լվանալ ատամները։</div>
@@ -139,7 +139,7 @@ h2.section-title {
     <div class="info-card">Ծխելը վնասում է լնդերը և գունափոխում ատամները։</div>
 </div>
 
-<!-- BENEFICIAL FOODS -->
+
 <h2 class="section-title">✅ Օգտակար սնունդ ատամների համար</h2>
 <div class="info-cards">
     <div class="info-card">🥛 Կաթնամթերք – ամրացնում է ատամի էմալը, պարունակում ֆոսֆոր և կալցիում։</div>
@@ -153,7 +153,7 @@ h2.section-title {
 <a class="back" href="index.html">⬅ Վերադառնալ գլխավոր էջ</a>
 
 <script>
-/* Scroll animation */
+
 const cards = document.querySelectorAll('.info-card');
 const observer = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
@@ -168,3 +168,4 @@ cards.forEach(card=>observer.observe(card));
 
 </body>
 </html>
+
